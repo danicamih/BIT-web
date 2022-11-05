@@ -1,0 +1,63 @@
+
+#prva {list-style-type: circle;}
+#druga {list-style-type: square;}
+#treca {list-style-type: lower-alpha;}
+#cetvrta {list-style-type: lower-roman;}
+#peta {
+    width:200px;
+}
+#sesta { 
+    background: yellow;
+    width:200px;
+    height: auto;
+    border-width: 5px;
+    border-style: solid;
+    border-color: green;
+    padding: 50px;
+    list-style-position: inside;
+}
+
+table {
+    padding: 10px;
+}
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+    
+  }
+
+  td {padding: 10px;}
+  tr {padding: 10px;}
+
+  #red {background: red;}
+  #odd1 {background: lightgrey;}
+  #odd2 {background: lightgrey;}
+
+  tr:hover {background-color: yellow;}
+
+
+div {
+    background-image:url(./background\ image.jpg);
+    background: lightgray;
+    width: 750px;
+    height: 750px;
+    margin: auto;
+}
+
+
+  .formimg {
+    width:500px;
+    text-align: right;
+    padding:right 10px;
+}
+
+h1{ }
+
+  
+   
+   
+
+
+    
+      
+
