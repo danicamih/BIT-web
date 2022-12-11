@@ -1,0 +1,19 @@
+body {
+  background-color: rgba(186, 151, 186, 0.537);
+  font-size: large;
+  font-weight: 200;
+}
+body nav {
+  background-color: red;
+}
+body nav a {
+  color: white;
+  font-weight: 300;
+  float: right;
+}
+body .p2 {
+  font-size: smaller;
+  font-weight: 100;
+  color: red;
+  webkit-border-radius: 10px;
+}/*# sourceMappingURL=vezba1.css.map */

@@ -1,0 +1,37 @@
+@mixin font-style {
+    font-family: $Helvetica;
+    font-style: $oblique;
+    text-decoration: $wavy;
+    text-shadow: 1px;
+    
+}
+    
+
+body {
+    width: 80%;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    margin: 8%;
+    align-items: center;
+    align-content: center;
+
+    .container {
+        width:90%;
+        margin-right: 5%;
+        margin-left: 5%;
+        padding-left: 20px;
+        padding-right: 20px;
+    background-color: lightgreen; 
+
+h1{
+    color: darkgreen;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+} 
+
+table {@include font-style($Helvetica, $oblique, $wavy, 1px);}
+
+}
+
+}
+

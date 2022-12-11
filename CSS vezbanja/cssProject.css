@@ -1,0 +1,548 @@
+@font-face {
+    font-family: 'robotoblack';
+    src: url('./Roboto-Black.ttf') format('woff2'),
+        url('assets/fonts/webfontkit/roboto-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoblack_italic';
+    src: url('assets/fonts/webfontkit/roboto-blackitalic-webfont.woff2') format('woff2'),
+        url('assets/fonts/webfontkit/roboto-blackitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotobold';
+    src: url('./Roboto-Bold.ttf') format('woff2'), url('assets/fonts/webfontkit/roboto-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotobold_italic';
+    src: url('assets/fonts/webfontkit/roboto-bolditalic-webfont.woff2') format('woff2'), url('assets/fonts/webfontkit/roboto-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoitalic';
+    src: url('assets/fonts/webfontkit/roboto-italic-webfont.woff2') format('woff2'), url('assets/fonts/webfontkit/roboto-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotolight';
+    src: url('./Roboto-Light.ttf') format('woff2'), url('assets/fonts/webfontkit/roboto-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotolight_italic';
+    src: url('assets/fonts/webfontkit/roboto-lightitalic-webfont.woff2') format('woff2'), url('assets/fonts/webfontkit/roboto-lightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotomedium';
+    src: url('./Roboto-Medium.ttf') format('woff2'), url('assets/fonts/webfontkit/roboto-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotomedium_italic';
+    src: url('assets/fonts/webfontkit/roboto-mediumitalic-webfont.woff2') format('woff2'), url('assets/fonts/webfontkit/roboto-mediumitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('assets/fonts/webfontkit/roboto-regular-webfont.woff2') format('woff2'), url('assets/fonts/webfontkit/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotothin';
+    src: url('assets/fonts/webfontkit/roboto-thin-webfont.woff2') format('woff2'), url('assets/fonts/webfontkit/roboto-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotothin_italic';
+    src: url('assets/fonts/webfontkit/roboto-thinitalic-webfont.woff2') format('woff2'), url('assets/fonts/webfontkit/roboto-thinitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    align-items: center center;
+    margin: 10px;
+    margin-top: 0px;
+    padding: 10px;
+    max-width: 100%;
+}
+
+
+
+
+.ljudi {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    
+}
+
+a {
+    display: flex;
+    float: none;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+ul {
+    list-style-image: url('./arrow_bullet.png');
+    text-align: left;
+    font-family: 'robotomedium';
+    color: grey;
+    font-size: smaller;
+
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+
+
+.border {
+    width: 100%;
+    text-align: center;
+}
+
+.line {
+    display: inline-block;
+    height: 20px;
+    width: 40px;
+    border-top: 2px solid black;
+}
+
+.square {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    margin: 0px 10px;
+    transform: rotate(45deg);
+    position: relative;
+    top: -9px;
+}
+
+
+.customers {
+    width: 30%;
+    border-radius: 50%;
+}
+
+.stars {
+    color: white ;
+    text-align: center;
+}
+
+.mobile {
+    list-style-image: url("./phone.png");
+    width: 50px;
+    height: 50px;
+}
+
+.email {
+    list-style-image: url("./email.jpg");
+    width: 50px;
+    height: 50px;
+}
+
+.facebook {
+    height: 50px;
+    width: 50px;
+}
+
+.insta {
+
+    height: 50px;
+    width: 50px;
+
+}
+
+.link {
+    height: 50px;
+    width: 50px;
+}
+
+.twitter {
+    height: 50px;
+    width: 50px;
+}
+
+.icon1 {
+    width: 50px;
+    height: 50px;
+}
+
+.kosmo {
+    text-align: center;
+}
+
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    text-align:left;
+    color: #146eb4;
+
+}
+
+.about {
+    width: 100%;
+    max-height: 400px;
+}
+
+.blue {
+    background-color: #7fc2f7;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.stars {
+    margin-left: 33%;
+}
+
+
+.container {
+        display:flex;
+        flex-wrap: wrap;
+
+}
+
+.items {
+    display: flex;
+    width:45%; 
+    height:220px ;
+    flex-basis: 220px;
+    align-self:center;
+    padding: 5%; 
+    font-family: 'robotomedium';
+    color: #fff;
+    
+}
+
+#item1 {
+    flex-direction: column;
+    flex: 1;
+    background-color: #3bdb9c;
+    justify-content:left
+}
+#item2 {
+    flex-direction: column;
+    flex: 1;
+    background-color:#fd5282;
+    justify-content: flex-start;
+}
+#item3 {
+    flex-direction: column;
+    flex: 1;
+    background-color: #376de4;
+}
+
+.address {
+    display: flex;
+    flex: 1;
+    text-align: center;
+    font-style: normal;
+
+}
+
+.contact1, .address {
+    font-size: medium;
+    color: #fff;
+}
+
+#item4 {
+    flex: 1;
+    background-color: #82c3f5;
+    justify-content: center;
+    align-items: center;
+}
+
+.house {
+    max-height: 200px;
+    margin: 20%;
+}
+
+.title {
+    text-align: center;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: space-around;
+}
+
+.contact1 {
+margin-left: 10% ;
+}
+
+iframe {
+    width:100%
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+}
+
+input, textarea {
+    width: 70%;
+    height:30px;
+    margin: 10px;
+}
+
+.submit {
+    width: 100px;
+    background-color: orange;
+    color: #fff;
+    font-family: 'robotomedium';
+    }
+
+
+@media screen and (max-width: 780px) {
+
+    #p2 {
+        display: none;
+    }
+
+    
+      a {
+        padding: 10px;
+      }
+
+      .descnav {
+        display: none;
+      }
+    
+
+    button {
+        width: 25%;
+        height: 8%;
+    }
+
+    .blue {
+        min-width: 100%;
+    }
+
+}
+
+
+@media screen and (min-width: 781px) and (max-width: 1000px) {
+
+    #p0 {
+        display: none;
+        
+    }
+    
+    .mobilenav {
+        display: none;
+    }
+
+    .backgroundImage {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: antiquewhite;
+        width: 100%;
+        min-height: 400px;
+        max-height: 600px ;
+       justify-content: space-between;
+       
+    
+    }
+
+    .p1 {
+        flex-direction: row;
+        white-space: nowrap;
+        width: 40%;
+        text-align: left;
+        font-family: 'robotobold';
+        font-size: xx-large;
+        color: grey;
+    }
+
+ .build {
+    border-top: 3px solid white;
+    border-bottom: 3px solid  white;
+    border-left: 3px solid white;
+    margin-left: 8px;
+}
+
+.descnav {
+    display: inline-flex;
+    width: 60%;
+    height: 30px;
+    margin-top: 20px;
+    margin-right: 8px;
+    align-self: stretch;
+  }
+
+  .inspo {
+    width:70%;
+  }
+
+  .toprow {
+    display: flex;
+  }
+  .toprow > :nth-child(2) {
+    margin-right: auto;
+  }
+  a {
+    padding: 10px;
+  }
+
+  .ljudi {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+  .blue {
+    width: 45%;
+}
+
+.items {
+    width:45%; }
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    input {
+        width: 30%;
+    } 
+    
+    textarea {
+        width: 90%;
+    }
+}
+    
+
+
+
+@media screen and (min-width: 1000px) {
+
+    #p0 {
+        display: none;
+        
+    }
+    
+    .mobilenav {
+        display: none;
+    }
+
+    .descnav {
+        display: inline-flex;
+        width: 70%;
+        height: 30px;
+        margin-top: 20px;
+        margin-right: 8px;
+      }
+    
+      .toprow {
+        display: flex;
+      }
+      .toprow > :nth-child(2) {
+        margin-right: auto;
+      }
+      a {
+        padding: 10px;
+      }
+
+    .build {
+        border-top: 3px solid white;
+        border-bottom: 3px solid  white;
+        border-left: 3px solid white;
+        margin-left: 8px;
+    }
+
+    .sq1 {
+
+        float: left;
+        width: 30%;
+        margin-right: 3.33%;
+
+    }
+
+    .about {
+        width: 30%;
+        margin-right: 3.33%;
+    }
+
+    .sq3 {
+        float: right;
+        width: 30%;
+        margin-right: 3.33%;
+    }
+
+    .ljudi {
+        justify-content: space-around;
+    }
+
+    .blue {
+        width: 30%;
+    }
+
+    .items {
+        width:45%; }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        input {
+            width: 30%;
+        } 
+        
+        textarea {
+            width: 90%;
+        }
+
+}
+
+

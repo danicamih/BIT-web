@@ -1,0 +1,98 @@
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    .ljudi {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .blue {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+
+    #p0 {
+        display: none;
+    }
+
+    .build {
+            color: orange;
+            border-top: 3px solid white;
+            border-bottom: 3px solid  white;
+            border-left: 3px solid white;
+            margin-left: 3%;
+        
+    }
+
+    .mobilenav {
+        display: none;
+    }
+
+    .toprow {
+        display: flex;
+      }
+      .toprow > :nth-child(2) {
+        margin-right: auto;
+      }
+      a {
+        padding: 10px;
+      }
+
+      .descnav {
+        display: inline-flex;
+        width: 70%;
+        height: 30px;
+        margin-top: 20px;
+        margin-right: 8px;
+      }
+
+      .midrow {
+        position: relative;
+        justify-content: center center;
+        margin-top: 20%;
+        margin-bottom: 50%;
+
+    }
+
+
+
+    .row1 {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        
+    }
+
+    .sq1 {
+
+        float: left;
+        width: 30%;
+        margin-right: 3.33%;
+
+    }
+
+    .about {
+        width: 30%;
+        margin-right: 3.33%;
+    }
+
+    .sq3 {
+        float: right;
+        width: 30%;
+        margin-right: 3.33%;
+    }
+
+    .ljudi {
+        justify-content: space-around;
+    }
+
+    .blue {
+        width: 30%;
+    }
+}
+

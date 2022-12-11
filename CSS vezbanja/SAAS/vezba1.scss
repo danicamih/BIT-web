@@ -1,0 +1,31 @@
+$font-stack : Helvetica, sans-serif;
+$primary-color : red;
+$radius : 50%; 
+
+@mixin border-radius ($radius) {
+    webkit-border-radius:$radius
+}
+
+body {
+    background-color: rgba(186, 151, 186, 0.537);
+    font-size: large;
+    font-weight: 200;
+
+    nav {
+        background-color: $primary-color;
+        @include border-radius(10px)
+        
+        a{color:white;
+            font-weight: 300;
+            float: right;
+
+        }
+    }
+    .p2 {
+        font-size: smaller;
+        font-weight: 100;
+        color:$primary-color;
+        
+    }
+
+}

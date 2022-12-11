@@ -1,0 +1,476 @@
+@font-face {
+  font-family: "robotoblack";
+  src: url("./Roboto-Black.ttf") format("woff2"), url("assets/fonts/webfontkit/roboto-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotoblack_italic";
+  src: url("assets/fonts/webfontkit/roboto-blackitalic-webfont.woff2") format("woff2"), url("assets/fonts/webfontkit/roboto-blackitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotobold";
+  src: url("./Roboto-Bold.ttf") format("woff2"), url("assets/fonts/webfontkit/roboto-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotobold_italic";
+  src: url("assets/fonts/webfontkit/roboto-bolditalic-webfont.woff2") format("woff2"), url("assets/fonts/webfontkit/roboto-bolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotoitalic";
+  src: url("assets/fonts/webfontkit/roboto-italic-webfont.woff2") format("woff2"), url("assets/fonts/webfontkit/roboto-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotolight";
+  src: url("./Roboto-Light.ttf") format("woff2"), url("assets/fonts/webfontkit/roboto-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotolight_italic";
+  src: url("assets/fonts/webfontkit/roboto-lightitalic-webfont.woff2") format("woff2"), url("assets/fonts/webfontkit/roboto-lightitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotomedium";
+  src: url("./Roboto-Medium.ttf") format("woff2"), url("assets/fonts/webfontkit/roboto-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotomedium_italic";
+  src: url("assets/fonts/webfontkit/roboto-mediumitalic-webfont.woff2") format("woff2"), url("assets/fonts/webfontkit/roboto-mediumitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotoregular";
+  src: url("assets/fonts/webfontkit/roboto-regular-webfont.woff2") format("woff2"), url("assets/fonts/webfontkit/roboto-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotothin";
+  src: url("assets/fonts/webfontkit/roboto-thin-webfont.woff2") format("woff2"), url("assets/fonts/webfontkit/roboto-thin-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotothin_italic";
+  src: url("assets/fonts/webfontkit/roboto-thinitalic-webfont.woff2") format("woff2"), url("assets/fonts/webfontkit/roboto-thinitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  align-items: center center;
+  margin: 10px;
+  margin-top: 0px;
+  padding: 10px;
+  max-width: 100%;
+}
+body header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+body header .p1 {
+  display: block;
+  white-space: nowrap;
+  width: 100%;
+  text-align: center;
+  font-family: "robotobold";
+  font-size: xx-large;
+  color: grey;
+}
+body header .build {
+  color: orange;
+  border-top: 4px solid grey;
+  border-bottom: 4px solid grey;
+  border-left: 4px solid grey;
+  padding: 2px;
+}
+body header .mobilenav {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-color: #7fc2f7;
+}
+body header .mobilenav a {
+  font-size: medium;
+  font-family: "robotobold";
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  justify-content: center;
+}
+body .backgroundImage {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: antiquewhite;
+  width: 100%;
+  min-height: 400px;
+  max-height: 600px;
+}
+body .backgroundImage #p2 {
+  display: none !important;
+}
+body .backgroundImage .descnav {
+  display: none;
+  float: right;
+  font-size: medium;
+  font-family: "robotobold";
+  font-weight: bold;
+  margin-top: 0px;
+  margin-right: 0px;
+  padding: 0%;
+}
+body .backgroundImage .descnav a {
+  display: flex;
+  float: none;
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+}
+body .backgroundImage .midrow {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  justify-content: center;
+  text-align: center;
+}
+body .backgroundImage .midrow .inspo {
+  width: 80%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 200%;
+  font-weight: 200;
+  color: #fff;
+  text-align: center;
+  align-self: center;
+}
+body .backgroundImage .midrow button {
+  background-color: #146eb4;
+  color: #fff;
+  font-weight: lighter;
+  border: none;
+  border-radius: 15px;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+  width: 120px;
+  height: 30px;
+}
+
+main {
+  margin: 5%;
+  margin-top: 0%;
+}
+main .whoWeAre .title1 .kosmo {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  text-align: center;
+}
+main .whoWeAre .title1 .border {
+  width: 100%;
+  text-align: center;
+}
+main .whoWeAre .title1 .border .line {
+  display: inline-block;
+  height: 20px;
+  width: 40px;
+  border-top: 2px solid black;
+}
+main .whoWeAre .title1 .border .square {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  margin: 0px 10px;
+  transform: rotate(45deg);
+  position: relative;
+  top: -9px;
+}
+main .whoWeAre .row1 {
+  width: 100%;
+}
+main .whoWeAre .row1 .sq {
+  width: 100%;
+}
+main .whoWeAre .row1 .sq h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  text-align: left;
+  color: #7fc2f7;
+}
+main .whoWeAre .row1 .sq .motivation {
+  font-family: "robotomedium";
+  color: #3e3c3c;
+  font-size: small;
+}
+main .whoWeAre .row1 .sq ul {
+  list-style-image: url("./arrow_bullet.png");
+  text-align: left;
+  font-family: "robotomedium";
+  color: grey;
+  font-size: smaller;
+}
+main .whoWeAre .row1 .sq ul li {
+  margin-bottom: 15px;
+}
+main .whoWeAre .row1 .sq ul .about {
+  display: flex;
+  align-self: center;
+  object-fit: scale-down;
+  margin: 20px;
+}
+main .whatPeopleSay h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  text-align: center;
+}
+main .whatPeopleSay .border {
+  width: 100%;
+  text-align: center;
+}
+main .whatPeopleSay .border .line {
+  display: inline-block;
+  height: 20px;
+  width: 40px;
+  border-top: 2px solid black;
+}
+main .whatPeopleSay .border .square {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  margin: 0px 10px;
+  transform: rotate(45deg);
+  position: relative;
+  top: -9px;
+}
+main .whatPeopleSay .ljudi {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+main .whatPeopleSay .ljudi .blue {
+  background-color: #7fc2f7;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+main .whatPeopleSay .ljudi .blue .upper {
+  width: 100%;
+}
+main .whatPeopleSay .ljudi .blue .upper .customers {
+  width: 20%;
+  height: 25%;
+  border-radius: 50%;
+  border-style: double;
+  border-width: 3px;
+  border-color: #fff;
+  float: left;
+  margin-right: 20px;
+}
+main .whatPeopleSay .ljudi .blue .upper .person {
+  text-align: start;
+  justify-content: first baseline;
+}
+main .whatPeopleSay .ljudi .blue .upper .customers1 {
+  font-family: "robotobold";
+}
+main .whatPeopleSay .ljudi .blue .upper .stars {
+  color: white;
+}
+main .whatPeopleSay .ljudi .blue .comment {
+  font-family: "robotomedium";
+  font-weight: lighter;
+  font-size: small;
+  line-height: 30px;
+  color: #fff;
+  width: 100%;
+  margin-top: 10%;
+}
+main .contact h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  text-align: center;
+}
+main .contact .border {
+  width: 100%;
+  text-align: center;
+}
+main .contact .border .line {
+  display: inline-block;
+  height: 20px;
+  width: 40px;
+  border-top: 2px solid black;
+}
+main .contact .border .square {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  margin: 0px 10px;
+  transform: rotate(45deg);
+  position: relative;
+  top: -9px;
+}
+main .contact .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .contact .container .items {
+  display: flex;
+  width: 45%;
+  height: 220px;
+  flex-basis: 220px;
+  align-self: center;
+  padding: 5%;
+  font-family: "robotomedium";
+  color: #fff;
+}
+main .contact .container #item1 {
+  flex-direction: column;
+  flex: 1;
+  background-color: #3bdb9c;
+  justify-content: left;
+}
+main .contact .container #item1 .contact1 {
+  margin-left: 10%;
+}
+main .contact .container #item1 .contact1 .mobile {
+  list-style-image: url("./phone.png");
+  width: 50px;
+  height: 50px;
+}
+main .contact .container #item1 .contact1 .email {
+  list-style-image: url("./email.jpg");
+  width: 50px;
+  height: 50px;
+}
+main .contact .container #item2 {
+  flex-direction: column;
+  flex: 1;
+  background-color: #fd5282;
+  justify-content: flex-start;
+}
+main .contact .container #item2 .icons {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  justify-content: space-around;
+}
+main .contact .container #item2 .facebook {
+  height: 50px;
+  width: 50px;
+}
+main .contact .container #item2 .insta {
+  height: 50px;
+  width: 50px;
+}
+main .contact .container #item2 .link {
+  height: 50px;
+  width: 50px;
+}
+main .contact .container #item2 .twitter {
+  height: 50px;
+  width: 50px;
+}
+main .contact .container #item3 {
+  flex-direction: column;
+  flex: 1;
+  background-color: #146eb4;
+}
+main .contact .container #item3 .address {
+  display: flex;
+  flex: 1;
+  text-align: center;
+  font-style: normal;
+}
+main .contact .container #item4 {
+  flex: 1;
+  background-color: #7fc2f7;
+  justify-content: center;
+  align-items: center;
+}
+main .contact .container #item4 .house {
+  max-height: 200px;
+  margin: 20%;
+}
+main .contact .container .title {
+  text-align: center;
+}
+main .contact .container .contact1, main .contact .container .address {
+  font-size: medium;
+  color: #fff;
+}
+main iframe {
+  width: 100%;
+}
+main .mailus h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  text-align: center;
+}
+main .mailus .border {
+  width: 100%;
+  text-align: center;
+}
+main .mailus .border .line {
+  display: inline-block;
+  height: 20px;
+  width: 40px;
+  border-top: 2px solid black;
+}
+main .mailus .border .square {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  margin: 0px 10px;
+  transform: rotate(45deg);
+  position: relative;
+  top: -9px;
+}
+main .mailus form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+}
+main .mailus form input {
+  width: 100%;
+  height: 30px;
+  margin: 10px;
+}
+main .mailus form textarea {
+  width: 100%;
+  height: 100px;
+  margin: 10px;
+}
+main .mailus form .submit {
+  width: 100px;
+  background-color: orange;
+  border-style: none;
+  color: #fff;
+  font-family: "robotomedium";
+  margin-left: 2%;
+}

@@ -1,0 +1,101 @@
+@media screen and (min-width: 851px) and (max-width: 1200px) {
+  #p0 {
+    display: none !important;
+  }
+
+  .mobilenav {
+    display: none !important;
+  }
+  .mobilenav a {
+    display: none !important;
+  }
+
+  header .backgroundImage {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: antiquewhite;
+    width: 100%;
+    min-height: 400px;
+    max-height: 600px;
+    justify-content: space-around;
+  }
+  header .backgroundImage .toprow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+  }
+  header .backgroundImage .toprow #p2 {
+    display: block !important;
+    flex-direction: row;
+    white-space: nowrap;
+    width: 40%;
+    text-align: left;
+    font-family: "robotobold";
+    font-size: xx-large;
+    color: grey;
+    float: left;
+  }
+  header .backgroundImage .toprow #p2 .build {
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    border-left: 3px solid white;
+    margin-left: 8px;
+  }
+  header .backgroundImage .toprow .descnav {
+    display: inline-flex !important;
+    width: 60%;
+    height: 30px;
+    margin-top: 20px;
+    margin-right: 8px;
+    align-self: stretch;
+    float: right;
+  }
+  header .backgroundImage .midrow {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    margin-top: 15px;
+  }
+  header .backgroundImage .midrow .inspo {
+    width: 90%;
+  }
+  header .sq1 {
+    float: left;
+    width: 30%;
+    margin-right: 3.33%;
+  }
+  header .about {
+    width: 30%;
+    margin-right: 3.33%;
+  }
+  header .sq3 {
+    float: right;
+    width: 30%;
+    margin-right: 3.33%;
+  }
+  header .ljudi {
+    justify-content: space-around;
+  }
+  header .ljudi .blue {
+    width: 30%;
+  }
+  header .items {
+    width: 45%;
+  }
+  header form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  header form input {
+    width: 30%;
+  }
+  header form textarea {
+    width: 90%;
+  }
+}
