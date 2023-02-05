@@ -1,0 +1,281 @@
+<!-- The goal of this exercise is to write a code for the web application that helps with the exam statistics. 
+
+The application should be form based.
+  
+html header should have output fields one below another showing the stats of passed and failled  students added to the bellow form in the main.
+That is the number and the percentage of students that have passed the exam, and both the number and the percentage of the 
+students who has failed the exam.
+
+The form itself should have three input fields and one button in the same row in the main part of the body. 
+The first field ashould be one where a user can select the name of the subject from the select list provided in the left part of the form. 
+Second input field should be where the user can type in the name and surname of the student.Both name and surname should be provided and both should start with capitals. 
+And the third input field is where the user can select a grade from the list provided. A grade should be valid numerical value from 1 to 10.
+In the same row should be the add button. When the user clicks on the ADD button, 
+the information about student and subject appears on the list titled with passed or failed depending on their score.
+Synchronously, the exam statistics presented in the page header is updated.
+If provided input is not valid, appropriate error messages should be shown.
+
+Below that there should be two tables next to each other showcasing inputs entered in the form above
+On the left side there should be the table of students who passed and on the right the table of the ones who failed
+
+1.
+write a constructor function with one argument that represents the name of the subject
+add to its prototype a method getSubjectName that returns the subject name
+
+2.
+write a constructor function with two arguments that represent name and surname of a student 
+add to its prototype a method getStudentData that returns the name and surname of the student
+
+3.
+write a constructor function with three arguments that represent a subject, a student, and a grade. 
+add to its prototype a method getExamInfo that returns the name of the subject and the name and surname of the student.
+add to its prototype a method hasPassed that checks if the student has passed the exam. A student has passed the exam if their grade is greater than 5.
+  
+4.
+write a function that collects all the data from the form
+write a function that validates all collected data
+write a function that updates the given list so it adds the new item at the end of the list
+write a function that updates the part of the page with the statistics with the count and the percentages of passed and failed exams
+
+
+5. 
+Declare all necessary variables for managing passed and failed exams as well as their statistics.
+Write all code that connects a user behaviour with application logic.   
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	
+	<script type="text/javascript" src="./app.js"></script>
+	<script type="text/javascript" src="./exam.js"></script>
+	<script type="text/javascript" src="./form.js"></script>
+	<script type="text/javascript" src="./student.js"></script>
+	<script type="text/javascript" src="./subject.js"></script>
+	
+	<link rel="stylesheet" href="./main.css">
+	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+	
+	<title>Document</title>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h1>Exam statistics</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+							<h3>Passed</h3>
+							<p id="passed"></p>
+						</div>
+			</div>
+			<div class="row">
+						<div class="col-12">
+							<h3>Failed</h3>
+							<p id="failed"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="col-6">
+					<form id="form" action="./index.html" method="GET">
+						<div class="row">
+							<div class="col-3">
+								<div class="mb-3">
+									<label for="subject" class="form-label">Subject</label>
+									<select class="form-select" id="subject" aria-label="Default select example">
+										<option selected>Select subject</option>
+										<option value="1">Math</option>
+										<option value="2">English</option>
+										<option value="3">Programming</option>
+										<option value="4">Physics</option>
+										<option value="5">Chemistry</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="mb-3">
+									<label for="student" class="form-label">Student</label>
+									<input type="text" class="form-control" id="student" placeholder="Student name and surname">
+								</div>
+							</div>				
+							<div class="col-3">
+								<div class="mb-3">
+									<label for="grade" class="form-label">Grade</label>
+									<select class="form-select" id="grade" aria-label="Default select example">
+										<option selected>Select grade</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="mb-3">
+									<br>
+									<button type="button" class="btn btn-primary" id="add" value="Submit">Add</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12">
+					<table class="table">
+						<thead>
+							<tr>
+								<th scope="col">Subject</th>
+								<th scope="col">Student</th>
+								<th scope="col">Grade</th>
+								<th scope="col">Date</th>
+								<th scope="col">Passed</th>
+							</tr>
+						</thead>
+						<tbody id="table">
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</main>
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+		<script>
+			$(document).ready(function () {
+				$("#add").click(function () {
+					var subject = $("#subject").val();
+					var student = $("#student").val();
+					var grade = $("#grade").val();
+					var date = moment().format('DD/MM/YYYY');
+					var passed = false;
+					if (grade > 5) {
+						passed = true;
+					}
+					var html = "<tr><td>" + subject + "</td><td>" + student + "</td><td>" + grade + "</td><td>" + date + "</td><td>" + passed + "</td></tr>";
+					$("#table").append(html);
+					$("#subject").val("Select subject");
+					$("#student").val("");
+					$("#grade").val("Select grade");
+					var passedCount = 0;
+					var failedCount = 0;
+					$("#table tr").each(function () {
+						var passed = $(this).find("td").eq(4).text();
+						if (passed == "true") {
+							passedCount++;
+						} else {
+							failedCount++;
+						}
+					});
+					$("#passed").text(passedCount);
+					$("#failed").text(failedCount);
+				});
+
+				$("#subject").change(function () {
+					var subject = $("#subject").val();
+					$("#table tr").each(function () {
+						var subject2 = $(this).find("td").eq(0).text();
+						if (subject == subject2) {
+							$(this).show();
+						} else {
+							$(this).hide();
+						}
+					});
+				});
+
+				$("#student").keyup(function () {
+					var student = $("#student").val();
+					$("#table tr").each(function () {
+						var student2 = $(this).find("td").eq(1).text();
+						if (student2.includes(student)) {
+							$(this).show();
+						} else {
+							$(this).hide();
+						}
+					});
+				});
+
+				$("#grade").change(function () {
+					var grade = $("#grade").val();
+					$("#table tr").each(function () {
+						var grade2 = $(this).find("td").eq(2).text();
+						if (grade == grade2) {
+							$(this).show();
+						} else {
+							$(this).hide();
+						}
+					});
+				});
+
+				$("#passed").click(function () {
+					$("#table tr").each(function () {
+						var passed = $(this).find("td").eq(4).text();
+						if (passed == "true") {
+							$(this).show();
+						} else {
+							$(this).hide();
+						}
+					});
+				});
+
+				$("#failed").click(function () {
+					$("#table tr").each(function () {
+						var passed = $(this).find("td").eq(4).text();
+						if (passed == "false") {
+							$(this).show();
+						} else {
+							$(this).hide();
+						}
+					});
+				});
+
+				$("#all").click(function () {
+					$("#table tr").each(function () {
+						$(this).show();
+					});
+				});
+
+				$("#clear").click(function () {
+					$("#table").empty();
+					$("#passed").text(0);
+					$("#failed").text(0);
+				});
+			});
+
+		</script>
+	</body>
+</html>
+
+
+				
+				
+				
+				
+				
+	
+</body>
+</html>
