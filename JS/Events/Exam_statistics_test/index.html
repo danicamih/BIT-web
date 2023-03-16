@@ -40,6 +40,7 @@ write a function that updates the part of the page with the statistics with the 
 
 5. 
 Declare all necessary variables for managing passed and failed exams as well as their statistics.
+
 Write all code that connects a user behaviour with application logic.   
 -->
 
@@ -74,6 +75,11 @@ Write all code that connects a user behaviour with application logic.
 			</div>
 			<div class="row">
 				<div class="col-12">
+					<h2>Total students %counts%</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
 							<h3>Passed</h3>
 							<p id="passed"></p>
 						</div>
@@ -81,7 +87,7 @@ Write all code that connects a user behaviour with application logic.
 			<div class="row">
 						<div class="col-12">
 							<h3>Failed</h3>
-							<p id="failed"></p>
+							<p id="failed"><span id="failedpercentage"></span></p>
 						</div>
 					</div>
 				</div>
@@ -98,7 +104,6 @@ Write all code that connects a user behaviour with application logic.
 								<div class="mb-3">
 									<label for="subject" class="form-label">Subject</label>
 									<select class="form-select" id="subject" aria-label="Default select example">
-										<option selected>Select subject</option>
 										<option value="1">Math</option>
 										<option value="2">English</option>
 										<option value="3">Programming</option>
@@ -117,7 +122,6 @@ Write all code that connects a user behaviour with application logic.
 								<div class="mb-3">
 									<label for="grade" class="form-label">Grade</label>
 									<select class="form-select" id="grade" aria-label="Default select example">
-										<option selected>Select grade</option>
 										<option value="1">1</option>
 										<option value="2">2</option>
 										<option value="3">3</option>
@@ -166,6 +170,7 @@ Write all code that connects a user behaviour with application logic.
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 
 		<script>
+
 			$(document).ready(function () {
 				$("#add").click(function () {
 					var subject = $("#subject").val();
@@ -182,17 +187,22 @@ Write all code that connects a user behaviour with application logic.
 					$("#student").val("");
 					$("#grade").val("Select grade");
 					var passedCount = 0;
-					var failedCount = 0;
-					$("#table tr").each(function () {
-						var passed = $(this).find("td").eq(4).text();
-						if (passed == "true") {
-							passedCount++;
-						} else {
-							failedCount++;
-						}
-					});
-					$("#passed").text(passedCount);
-					$("#failed").text(failedCount);
+        var failedCount = 0;
+        var total = 0;
+        var failedpercentage = 0;
+        $("#table tr").each(function () {
+            var passed = $(this).find("td").eq(4).text();
+            if (passed == "true") {
+                passedCount++;
+            } else {
+                failedCount++;
+            }
+        });
+        $("#passed").text(passedCount);
+        $("#failed").text(failedCount);
+        total = passedCount + failedCount;
+        failedpercentage = (failedCount / total) * 100;
+        $("#failedpercentage").text(failedpercentage);
 				});
 
 				$("#subject").change(function () {
@@ -259,12 +269,8 @@ Write all code that connects a user behaviour with application logic.
 					});
 				});
 
-				$("#clear").click(function () {
-					$("#table").empty();
-					$("#passed").text(0);
-					$("#failed").text(0);
-				});
 			});
+		
 
 		</script>
 	</body>
