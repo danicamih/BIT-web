@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "Lato";
+  src: url("../vendor/font-awesome/Lato-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "Lato";
+}
+body .container-fluid {
+  width: 100%;
+}
+body .container-fluid #row1 {
+  background-color: #293e4f;
+  color: white;
+  font-weight: bold;
+}
+body .container-fluid #row1 .col-1 .navbar {
+  float: right;
+  background-color: #00bc9c;
+}
+body .container-fluid #row1 .col-1 .navbar .btn {
+  background-color: #00bc9c;
+  float: right;
+}
+body #row2 .col-1 {
+  width: 100%;
+  background-color: #00bc9c;
+}
+body #row2 .col-1 .profile {
+  justify-content: center;
+  text-align: center;
+}/*# sourceMappingURL=main.css.map */
